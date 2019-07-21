@@ -1,0 +1,1 @@
+consul agent -dev -ui -node=cy -bootstrap-expect 1 -data-dir .\data\ -advertise 127.0.0.1 -client 0.0.0.0 -ui -config-dir .\
