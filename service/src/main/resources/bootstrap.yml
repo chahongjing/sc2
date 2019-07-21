@@ -1,0 +1,10 @@
+spring:
+  cloud:
+    consul:
+      host: localhost
+      port: 8501
+      config:
+        prefix: config
+        format: yaml
+        data-key: data
+        enabled: true

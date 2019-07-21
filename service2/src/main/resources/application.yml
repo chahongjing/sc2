@@ -1,0 +1,22 @@
+server:
+  port: 9300
+
+spring:
+  application:
+    name: hystrix
+  cloud:
+    consul:
+      host: localhost
+      port: 8501
+      discovery:
+        instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+        service-name: hystrix
+  instance:
+    instance-id: ${spring.application.name}:${spring.cloud.client.ipAddress}:${spring.application.instance_id:${server.port}}
+    prefer-ip-address: true #访问路径可以显示IP地址
+info:
+  app.name: hystrix
+  app.update: 2018-10-07
+  build.groupId: $project.groupId$
+  build.artifactId: $project.artifactId$
+  build.version: $project.version$
