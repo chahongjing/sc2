@@ -1,7 +1,7 @@
 # spring cloud
 ### 说明
 |模块|实现|访问|说明|
-|-|-|-|-|
+|---|---|---|---|
 |配置中心|consule|[8501](http://localhost:8501/ui/dc1/services)|从consule中获取配置 config/spring-cloud-producer/data：configname: from consule<br>@EnableConfigServer, @EnableDiscoveryClient|
 |服务注册与发现|consule|[8501](http://localhost:8501/ui/dc1/services)||
 |服务提供|springboot|[9200](http://localhost:9200/hello?name=zjy) \| [9300](http://localhost:9300/getHostMessage/1123)|1. 使用bootstrap.yml配置配置服务获取相关配置<br>2. 指定zipkin和sleuth进行服务调用跟踪<br>3. @EnableDiscoveryClient, @EnableCircuitBreaker<br>4. 同一服务不同实例必变端口即可|
